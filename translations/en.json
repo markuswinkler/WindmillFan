@@ -1,0 +1,36 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Windmill Fan Setup",
+        "description": "Enter your device authentication token from the Windmill Air Dashboard ({dashboard_url})",
+        "data": {
+          "token": "Device Token"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Failed to connect to Windmill device. Please check your internet connection and try again.",
+      "invalid_auth": "Invalid authentication token. Please verify your token from the Windmill Air Dashboard.",
+      "unknown": "Unexpected error occurred. Please try again."
+    },
+    "abort": {
+      "already_configured": "This Windmill device is already configured."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Windmill Fan Options",
+        "description": "Update your device authentication token from the Windmill Air Dashboard ({dashboard_url})",
+        "data": {
+          "token": "Device Token"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Failed to connect to Windmill device. Please check your internet connection and try again.",
+      "invalid_auth": "Invalid authentication token. Please verify your token from the Windmill Air Dashboard."
+    }
+  }
+}

@@ -1,5 +1,6 @@
 {
-    "name": "WindmillAC",
-    "homeassistant": "2024.4.0",
-    "render_readme": true
+    "name": "Windmill Fan",
+    "homeassistant": "2024.1.0",
+    "render_readme": true,
+    "iot_class": "cloud_polling"
 }

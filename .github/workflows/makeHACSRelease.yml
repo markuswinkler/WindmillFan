@@ -10,16 +10,24 @@ jobs:
 
     steps:
     - name: Checkout code
-      uses: actions/checkout@v2
+      uses: actions/checkout@v4
 
     - name: Create Zip File
       run: |
-        zip -r release.zip .
+        # Create release directory and copy integration files
+        mkdir -p release/custom_components/windmillfan
+        cp -r custom_components/windmillfan/* release/custom_components/windmillfan/
+        cp README.md release/
+        cp hacs.json release/
+        
+        # Create zip file
+        cd release
+        zip -r ../hacs_windmill.zip .
+        cd ..
 
     - name: Upload Release Asset
-      uses: actions/upload-release-asset@v1
+      uses: softprops/action-gh-release@v1
       with:
-        upload_url: ${{ github.event.release.upload_url }}
-        asset_path: ./release.zip
-        asset_name: hacs_windmill.zip
-        asset_content_type: application/zip
+        files: hacs_windmill.zip
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

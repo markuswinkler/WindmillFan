@@ -1,0 +1,13 @@
+{
+  "domain": "windmillfan",
+  "name": "Windmill Fan",
+  "codeowners": ["@markuswinkler"],
+  "config_flow": true,
+  "documentation": "https://github.com/markuswinkler/WindmillFan",
+  "integration_type": "device",
+  "iot_class": "cloud_polling",
+  "issue_tracker": "https://github.com/markuswinkler/WindmillFan/issues",
+  "requirements": ["aiohttp>=3.8.0"],
+  "version": "1.0.5",
+  "loggers": ["custom_components.windmillfan"]
+}
